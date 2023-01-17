@@ -5,7 +5,7 @@
   <artifactId>parser</artifactId>
   <version>1.0</version>
 
-  <name>Przyklad - aplikacja wielomodulowa</name>
+  <name>parser</name>
   <packaging>pom</packaging>
 
   <!-- Dodane przez pskrzynski -->
@@ -38,17 +38,6 @@
               <groupId>com.thoughtworks.xstream</groupId>
               <artifactId>xstream</artifactId>
               <version>1.4.20</version>
-          </dependency>
-          <dependency>
-              <groupId>jakarta.xml.bind</groupId>
-              <artifactId>jakarta.xml.bind-api</artifactId>
-              <version>4.0.0</version>
-          </dependency>
-          <dependency>
-              <groupId>com.sun.xml.bind</groupId>
-              <artifactId>jaxb-impl</artifactId>
-              <version>4.0.1</version>
-              <scope>runtime</scope>
           </dependency>
 
 
