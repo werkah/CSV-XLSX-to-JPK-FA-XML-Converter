@@ -2,8 +2,6 @@ package pl.edu.agh.kis.pz1;
 //przyjmowanie plikow csv i xlsx, sprawdzanie ich poprawnosci, parsowanie do xml
 
 
-import pl.edu.agh.kis.pz1.util.CSVReader;
-import pl.edu.agh.kis.pz1.util.XLSXReader;
 import pl.edu.agh.kis.pz1.util.XMLWriter;
 
 public class Main {
