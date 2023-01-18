@@ -4,25 +4,23 @@ package pl.edu.agh.kis.pz1;
 
 import pl.edu.agh.kis.pz1.util.CSVReader;
 import pl.edu.agh.kis.pz1.util.XLSXReader;
+import pl.edu.agh.kis.pz1.util.XMLWriter;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        int filetype;
+        String type;
         if (args.length != 2) {
-            throw new Exception("zla liczb arg");//podzial przez kropke
+            throw new Exception("zla liczb arg");
         } else if (args[0].split("\\.")[1].equals("csv")) {
-            filetype = 0;
+            type = "csv";
+            XMLWriter xmlWriter = new XMLWriter();
+            xmlWriter.write(type, args[1], args[0]);
         } else if (args[0].split("\\.")[1].equals("xlsx")) {
-            filetype = 1;
+            type = "xlsx";
+            XMLWriter xmlWriter = new XMLWriter();
+            xmlWriter.write(type, args[1], args[0]);
         } else {
             throw new Exception("zly format pliku");
-        }
-        if (filetype == 0) {
-            CSVReader csvReader = new CSVReader(args[0], args[1]);
-            csvReader.parse();
-        } else if (filetype == 1) {
-            XLSXReader xlsxReader = new XLSXReader(args[0], args[1]);
-            xlsxReader.parse();
         }
     }
 }
