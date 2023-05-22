@@ -4,8 +4,10 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import java.math.BigDecimal;
 
+/**
+ */
 @XmlRootElement(name="tns:Faktura")
-public class faktura {
+public class Faktura {
     final String kodWaluty = "PLN";
     String p1;
     String p2A;
@@ -32,7 +34,7 @@ public class faktura {
     final Boolean p106E2 = false;
     final Boolean p106E3 = false;
     final String rodzajFaktury = "VAT";
-    public faktura(String p3A, String p3B, String p5B, String p1, String p6, String p2A, BigDecimal p131, BigDecimal p141, BigDecimal p15){
+    public Faktura(String p3A, String p3B, String p5B, String p1, String p6, String p2A, BigDecimal p131, BigDecimal p141, BigDecimal p15){
         this.p1 = p1;
         this.p3A = p3A;
         this.p2A = p2A;
@@ -148,5 +150,11 @@ public class faktura {
     public String getRodzajFaktury() {
         return rodzajFaktury;
     }
-    public faktura(){}
+    public Faktura(){}
+    public BigDecimal getSum() {
+        return p15;
+    }
+    public String getId() {
+        return p1;
+    }
 }

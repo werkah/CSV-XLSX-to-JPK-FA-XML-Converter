@@ -4,8 +4,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import java.math.BigDecimal;
 
-@XmlRootElement(name="tns:Faktura")
-public class fakturawiersz {
+@XmlRootElement(name="tns:FakturaWiersz")
+public class FakturaWiersz {
 
     String p2B;
 
@@ -16,7 +16,7 @@ public class fakturawiersz {
     BigDecimal p9B;
     BigDecimal p11;
     String p12;
-    public fakturawiersz(String p2B, String p12, BigDecimal p9B, BigDecimal p8B, BigDecimal p9A, BigDecimal p11) {
+    public FakturaWiersz(String p2B, String p12, BigDecimal p9B, BigDecimal p8B, BigDecimal p9A, BigDecimal p11) {
         this.p2B = p2B;
         this.p12 = p12;
         this.p9B = p9B;
@@ -65,6 +65,10 @@ public class fakturawiersz {
         return p11;
     }
 
-    public fakturawiersz() {
+    public FakturaWiersz() {
+    }
+
+    public BigDecimal getSum() {
+        return p11;
     }
 }

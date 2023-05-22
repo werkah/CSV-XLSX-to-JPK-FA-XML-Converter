@@ -1,24 +1,22 @@
 package pl.edu.agh.kis.pz1;
-//przyjmowanie plikow csv i xlsx, sprawdzanie ich poprawnosci, parsowanie do xml
 
 
+import pl.edu.agh.kis.pz1.util.Reader;
 import pl.edu.agh.kis.pz1.util.XMLWriter;
 
+/**
+ * Main class of the program
+ */
 public class Main {
     public static void main(String[] args) throws Exception {
-        String type;
         if (args.length != 2) {
-            throw new Exception("zla liczb arg");
+            throw new Exception("Zla liczba argumentow");
         } else if (args[0].split("\\.")[1].equals("csv")) {
-            type = "csv";
-            XMLWriter xmlWriter = new XMLWriter();
-            xmlWriter.write(type, args[1], args[0]);
+            XMLWriter.write(Reader.ReaderCSV(args[0]), args[1]);
         } else if (args[0].split("\\.")[1].equals("xlsx")) {
-            type = "xlsx";
-            XMLWriter xmlWriter = new XMLWriter();
-            xmlWriter.write(type, args[1], args[0]);
+            XMLWriter.write(Reader.ReaderXLSX(args[0]), args[1]);
         } else {
-            throw new Exception("zly format pliku");
+            throw new Exception("Zly format pliku");
         }
     }
 }

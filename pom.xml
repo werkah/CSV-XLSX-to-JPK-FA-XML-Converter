@@ -27,13 +27,6 @@
                 <artifactId>utils</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.2</version>
-            </dependency>
-
-
         </dependencies>
     </dependencyManagement>
     <build>
@@ -51,25 +44,5 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <profiles>
-        <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <sonar.projectKey>
-                    parser
-                </sonar.projectKey>
-                <sonar.host.url>
-                    http://localhost:9000
-                </sonar.host.url>
-                <sonar.login>
-                    sqp_20d6243527e30f41e11972eb67e33b65ce5e1202
-                </sonar.login>
-            </properties>
-        </profile>
-    </profiles>
 </project>
 
